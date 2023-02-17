@@ -4,7 +4,7 @@ import MovieCard from './MovieCard';
 import styles from '../styles/Main.module.css';
 import Loading from './Loading';
 
-export default function Main() {
+export default function FilmList() {
   const {
     filmList, setFilmList, loading, setLoading, setError,
   } = useContext(FilmsContext);
