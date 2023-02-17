@@ -1,9 +1,9 @@
 import { useContext, useEffect } from 'react';
-import Header from '../components/Header';
 import FilmsContext from '../context/FilmsContext';
+import MovieCard from './MovieCard';
 
-export default function Home() {
-  const { setFilmList, setError, setLoading } = useContext(FilmsContext);
+export default function Main() {
+  const { setFilmList, setLoading, setError, filmList } = useContext(FilmsContext);
 
   const getMovies = async () => {
     try {
@@ -12,6 +12,7 @@ export default function Home() {
         throw new Error(`Error: ${response.status}`);
       }
       const data = await response.json();
+      console.log(data);
       setFilmList(data);
       setLoading(false);
     } catch (error) {
@@ -24,9 +25,19 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <Header />
+    <main>
       <h1>Films</h1>
-    </div>
+      <ul>
+        { filmList.map((film) => (
+          <li key={ film.id }>
+            <MovieCard
+              title={ film.title }
+              image={ film.image }
+              description={ film.description }
+            />
+          </li>
+        )) }
+      </ul>
+    </main>
   );
 }
