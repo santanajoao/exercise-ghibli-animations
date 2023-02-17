@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import FilmsContext from '../context/FilmsContext';
 import FilmCardList from './FilmCardList';
-import styles from '../FavoriteList.module.css';
+import styles from '../styles/FavoriteList.module.css';
 
 export default function FavoriteList() {
   const { favoriteList } = useContext(FilmsContext);
