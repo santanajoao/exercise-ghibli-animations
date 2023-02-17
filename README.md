@@ -4,15 +4,15 @@
 
 ---
 
-## Proposta
-Esse repositório contem uma aplicação React feita com o objetivo de praticar o conteúdo Context API durante o curso de desenvolvimento web na Trybe.
+## Deploy
+Você pode acessar a aplicação pelo seguinte link:
+
+### [studio-ghibli-films-jpsc.surge.sh](studio-ghibli-films-jpsc.surge.sh)
 
 ---
 
-## Deploy
-Você pode acessar o deploy da aplicação pelo seguinte link:
-
-### [studio-ghibli-films-jpsc.surge.sh](studio-ghibli-films-jpsc.surge.sh)
+## Proposta
+Esse repositório contem uma aplicação React feita com o objetivo de praticar o conteúdo Context API durante o curso de desenvolvimento web na Trybe.
 
 ---
 
@@ -31,3 +31,6 @@ A página de favoritos lista os filmes favoritados pelo usuário e permite que s
 - Context API
 - CSS Modules
 - React Icons
+- Consulta a API
+
+---
