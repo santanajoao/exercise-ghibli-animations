@@ -1,8 +1,7 @@
 import { useContext, useEffect } from 'react';
 import FilmsContext from '../context/FilmsContext';
-import FilmCard from './FilmCard';
-import styles from '../styles/Main.module.css';
 import Loading from './Loading';
+import FilmCardList from './FilmCardList';
 
 export default function FilmList() {
   const {
@@ -18,7 +17,6 @@ export default function FilmList() {
         throw new Error(`Error: ${response.status}`);
       }
       const data = await response.json();
-      console.log(data);
       setFilmList(data);
       setLoading(false);
     } catch (error) {
@@ -35,20 +33,9 @@ export default function FilmList() {
   }
 
   return (
-    <main className={ styles.main }>
-      <h1 className={ styles.title }>Films</h1>
-      <ul className={ styles.list }>
-        {filmList.map((film) => (
-          <li key={ film.id }>
-            <FilmCard
-              title={ film.title }
-              image={ film.image }
-              id={ film.id }
-              description={ film.description }
-            />
-          </li>
-        ))}
-      </ul>
-    </main>
+    <FilmCardList
+      heading="Films"
+      filmList={ filmList }
+    />
   );
 }
