@@ -2,10 +2,11 @@ import { useContext, useEffect } from 'react';
 import FilmsContext from '../context/FilmsContext';
 import Loading from './Loading';
 import FilmCardList from './FilmCardList';
+import ErrorMessage from './ErrorMessage';
 
 export default function FilmList() {
   const {
-    filmList, setFilmList, loading, setLoading, setError,
+    filmList, setFilmList, loading, setLoading, error, setError,
   } = useContext(FilmsContext);
 
   const getMovies = async () => {
@@ -18,15 +19,20 @@ export default function FilmList() {
       }
       const data = await response.json();
       setFilmList(data);
-      setLoading(false);
     } catch (error) {
-      setError(error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
   useEffect(() => {
     getMovies();
   }, []);
+
+  if (error) {
+    return <ErrorMessage error={error} />;
+  }
 
   if (loading) {
     return <Loading />;
