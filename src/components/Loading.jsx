@@ -10,6 +10,7 @@ export default function Loading() {
         className={ styles.gif }
         alt="Carregando..."
       />
+      <p className={ styles.text }>Carregando...</p>
     </div>
   );
 }
