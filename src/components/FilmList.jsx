@@ -11,7 +11,7 @@ export default function FilmList() {
   const getMovies = async () => {
     try {
       const response = await fetch(
-        'https://api-trybe-frontend.vercel.app/api/ghibli-animationss'
+        'https://api-trybe-frontend.vercel.app/api/ghibli-animations'
       );
       if (!response.ok) {
         throw new Error(`Error: ${response.status}`);
