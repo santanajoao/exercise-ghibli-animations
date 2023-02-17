@@ -8,16 +8,11 @@ export default function FavoriteList() {
 
   if (favoriteList.length === 0) {
     return (
-      <main className={ styles.main }>
-        <p className={ styles.message }>You haven&apos;t added favorites yet</p>
+      <main className={styles.main}>
+        <p className={styles.message}>You haven&apos;t added favorites yet</p>
       </main>
     );
   }
 
-  return (
-    <FilmCardList
-      heading="Favorites"
-      filmList={ favoriteList }
-    />
-  );
+  return <FilmCardList heading="Favorites" filmList={favoriteList} />;
 }

@@ -5,12 +5,12 @@ import styles from '../styles/Header.module.css';
 
 export default function Header() {
   return (
-    <header className={ styles.header }>
-      <nav className={ styles.nav }>
-        <Link to="/" className={ styles.logo_link }>
+    <header className={styles.header}>
+      <nav className={styles.nav}>
+        <Link to="/" className={styles.logo_link}>
           <img
-            src={ studioGhibliLogo }
-            className={ styles.logo }
+            src={studioGhibliLogo}
+            className={styles.logo}
             alt="Logo do Studio Ghibli"
           />
         </Link>
@@ -18,9 +18,9 @@ export default function Header() {
         <Link
           to="/favorites"
           title="Link to favorites"
-          className={ styles.favorites_link }
+          className={styles.favorites_link}
         >
-          <AiFillStar className={ styles.favorites_icon } />
+          <AiFillStar className={styles.favorites_icon} />
         </Link>
       </nav>
     </header>

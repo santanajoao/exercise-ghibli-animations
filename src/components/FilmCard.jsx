@@ -12,7 +12,9 @@ export default function FilmCard(props) {
 
   const handleFavorite = () => {
     if (isFavorite) {
-      const newFavorites = favoriteList.filter((favorite) => favorite.id !== id);
+      const newFavorites = favoriteList.filter(
+        (favorite) => favorite.id !== id
+      );
       setFavoriteList(newFavorites);
     } else {
       setFavoriteList([...favoriteList, { image, title, description, id }]);
@@ -20,22 +22,22 @@ export default function FilmCard(props) {
   };
 
   return (
-    <div className={ styles.card }>
+    <div className={styles.card}>
       <button
-        title={ isFavorite ? 'Remove from favorites' : 'Add to favorites' }
-        onClick={ handleFavorite }
-        className={ styles.button }
+        title={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+        onClick={handleFavorite}
+        className={styles.button}
       >
         {isFavorite ? (
-          <AiFillStar className={ styles.icon } />
+          <AiFillStar className={styles.icon} />
         ) : (
-          <AiOutlineStar className={ styles.icon } />
+          <AiOutlineStar className={styles.icon} />
         )}
       </button>
-      <img src={ image } className={ styles.image } alt="Film cape" />
-      <div className={ styles.infos_wrapper }>
-        <h3 className={ styles.title }>{title}</h3>
-        <p className={ styles.description }>{description}</p>
+      <img src={image} className={styles.image} alt="Film cape" />
+      <div className={styles.infos_wrapper}>
+        <h3 className={styles.title}>{title}</h3>
+        <p className={styles.description}>{description}</p>
       </div>
     </div>
   );

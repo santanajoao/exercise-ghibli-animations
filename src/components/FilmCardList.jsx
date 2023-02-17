@@ -4,16 +4,16 @@ import styles from '../styles/FilmCardList.module.css';
 
 export default function FilmCardList({ heading, filmList }) {
   return (
-    <main className={ styles.main }>
-      <h1 className={ styles.title }>{ heading }</h1>
-      <ul className={ styles.list }>
+    <main className={styles.main}>
+      <h1 className={styles.title}>{heading}</h1>
+      <ul className={styles.list}>
         {filmList.map((film) => (
-          <li key={ film.id }>
+          <li key={film.id}>
             <FilmCard
-              title={ film.title }
-              image={ film.image }
-              id={ film.id }
-              description={ film.description }
+              title={film.title}
+              image={film.image}
+              id={film.id}
+              description={film.description}
             />
           </li>
         ))}
@@ -30,6 +30,6 @@ FilmCardList.propTypes = {
       title: PropTypes.string,
       image: PropTypes.string,
       description: PropTypes.string,
-    }),
+    })
   ).isRequired,
 };
