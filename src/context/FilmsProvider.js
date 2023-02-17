@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 import FilmsContext from './FilmsContext';
 
@@ -8,7 +8,7 @@ function FilmsProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const values = {
+  const values = useMemo(() => ({
     filmList,
     setFilmList,
     loading,
@@ -17,7 +17,7 @@ function FilmsProvider({ children }) {
     setError,
     favoriteList,
     setFavoriteList,
-  };
+  }), [filmList, loading, error, favoriteList]);
 
   return (
     <FilmsContext.Provider value={ values }>
