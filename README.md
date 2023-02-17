@@ -7,7 +7,7 @@
 ## Deploy
 Você pode acessar a aplicação pelo seguinte link:
 
-### [studio-ghibli-films-jpsc.surge.sh](studio-ghibli-films-jpsc.surge.sh)
+### [studio-ghibli-films-jpsc.surge.sh](https://studio-ghibli-films-jpsc.surge.sh)
 
 ---
 
