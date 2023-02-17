@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
 import FilmsContext from '../context/FilmsContext';
-import MovieCard from './MovieCard';
+import FilmCard from './FilmCard';
 import styles from '../styles/Main.module.css';
 import Loading from './Loading';
 
@@ -40,7 +40,7 @@ export default function FilmList() {
       <ul className={ styles.list }>
         {filmList.map((film) => (
           <li key={ film.id }>
-            <MovieCard
+            <FilmCard
               title={ film.title }
               image={ film.image }
               id={ film.id }

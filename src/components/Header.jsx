@@ -17,7 +17,7 @@ export default function Header() {
 
         <Link
           to="/favorites"
-          title="Link para os favoritos"
+          title="Link to favorites"
           className={ styles.favorites_link }
         >
           <AiFillStar className={ styles.favorites_icon } />

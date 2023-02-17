@@ -1,5 +1,11 @@
+import Header from '../components/Header';
+import FavoriteList from '../components/FavoriteList';
+
 export default function Favorites() {
   return (
-    <h1>Favorites</h1>
+    <div>
+      <Header />
+      <FavoriteList />
+    </div>
   );
 }

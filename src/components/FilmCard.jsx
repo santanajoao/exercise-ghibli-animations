@@ -2,9 +2,9 @@ import { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import FilmsContext from '../context/FilmsContext';
-import styles from '../styles/MovieCard.module.css';
+import styles from '../styles/FilmCard.module.css';
 
-export default function MovieCard(props) {
+export default function FilmCard(props) {
   const { image, title, description, id } = props;
   const { favoriteList, setFavoriteList } = useContext(FilmsContext);
 
@@ -21,7 +21,11 @@ export default function MovieCard(props) {
 
   return (
     <div className={ styles.card }>
-      <button onClick={ handleFavorite } className={ styles.button }>
+      <button
+        title={ isFavorite ? 'Remove from favorites' : 'Add to favorites' }
+        onClick={ handleFavorite }
+        className={ styles.button }
+      >
         {isFavorite ? (
           <AiFillStar className={ styles.icon } />
         ) : (
@@ -37,7 +41,7 @@ export default function MovieCard(props) {
   );
 }
 
-MovieCard.propTypes = {
+FilmCard.propTypes = {
   id: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
