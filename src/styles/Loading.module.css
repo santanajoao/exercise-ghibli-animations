@@ -7,5 +7,6 @@
 }
 
 .gif {
-  width: 120px;
+  width: 140px;
+  mix-blend-mode: darken;
 }
