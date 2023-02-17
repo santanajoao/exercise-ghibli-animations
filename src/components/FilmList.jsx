@@ -43,6 +43,7 @@ export default function FilmList() {
             <MovieCard
               title={ film.title }
               image={ film.image }
+              id={ film.id }
               description={ film.description }
             />
           </li>

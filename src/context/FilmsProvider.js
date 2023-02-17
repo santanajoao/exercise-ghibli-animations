@@ -4,11 +4,19 @@ import FilmsContext from './FilmsContext';
 
 function FilmsProvider({ children }) {
   const [filmList, setFilmList] = useState([]);
+  const [favoriteList, setFavoriteList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const values = {
-    filmList, setFilmList, loading, setLoading, error, setError,
+    filmList,
+    setFilmList,
+    loading,
+    setLoading,
+    error,
+    setError,
+    favoriteList,
+    setFavoriteList,
   };
 
   return (
